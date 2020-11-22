@@ -1,8 +1,13 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
+
+
 export class CreateCategory1605848872694 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
+
+        await queryRunner.query(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`);
+
         await queryRunner.createTable(
             new Table({
                 name:'categories',
@@ -28,7 +33,7 @@ export class CreateCategory1605848872694 implements MigrationInterface {
                         type:'timestamp',
                         default:'now()',
                     },
-                ]
+                ],
             })
         )
     }

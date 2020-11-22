@@ -112,7 +112,7 @@ describe('Transaction', () => {
     const transaction = await transactionsRepository.findOne({
       where: {
         title: 'March Salary',
-        category_id: category?.id,
+        category_name: category?.id,
       },
     });
 
@@ -145,7 +145,7 @@ describe('Transaction', () => {
     const transaction = await transactionsRepository.findOne({
       where: {
         title: 'March Salary',
-        category_id: insertedCategoryId,
+        category_name: insertedCategoryId,
       },
     });
 

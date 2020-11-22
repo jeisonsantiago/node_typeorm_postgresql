@@ -8,8 +8,8 @@ export default async (name = 'default'): Promise<Connection> => {
       name,
       database:
         process.env.NODE_ENV === 'test'
-          //? 'gostack_desafio06_tests'
-          ? 'go_finances_tests'
+          ? 'gostack_desafio06_tests'
+          // ? 'go_finances'
           : defaultOptions.database,
     }),
   );
