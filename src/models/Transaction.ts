@@ -24,6 +24,9 @@ class Transaction {
   @Column('real')
   value: number;
 
+  @Column('varchar')
+  category_id:string;
+
   @ManyToOne(()=>Category,{eager:true})
   @JoinColumn({name:'category_id'})
   category: Category;
